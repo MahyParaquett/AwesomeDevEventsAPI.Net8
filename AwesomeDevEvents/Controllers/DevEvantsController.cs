@@ -3,6 +3,7 @@ using AwesomeDevEventsAPI.Persistence;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace AwesomeDevEventsAPI.Controllers
 {
@@ -19,14 +20,14 @@ namespace AwesomeDevEventsAPI.Controllers
         [HttpGet]
         public IActionResult GetAll() 
         {//retorne todos os objetos que não estão deletados
-            var devEvents = _dbContext.DevEvent.Where(x => !x.IsDeleted).ToList();
+            var devEvents = _dbContext.DevEvents.Where(x => !x.IsDeleted).ToList();
             return Ok(devEvents);
         }
 
         [HttpGet("{id}")]
         public IActionResult GetById(Guid id)
         {
-            var devEvent = _dbContext.DevEvent.SingleOrDefault(x => x.Id == id);
+            var devEvent = _dbContext.DevEvents.Include(de => de.Speakers).SingleOrDefault(x => x.Id == id);
             if (devEvent == null)
             {
                 return NotFound("Id não encontrado");
@@ -38,7 +39,9 @@ namespace AwesomeDevEventsAPI.Controllers
         [HttpPost]
         public IActionResult Post(DevEvent devEvent)
         {
-            _dbContext.DevEvent.Add(devEvent);
+            _dbContext.DevEvents.Add(devEvent);
+
+            _dbContext.SaveChanges();
 
             return CreatedAtAction(nameof(GetById), new { id = devEvent.Id }, devEvent);
 
@@ -47,13 +50,16 @@ namespace AwesomeDevEventsAPI.Controllers
         [HttpPut("{id}")]
         public IActionResult Update(Guid id, DevEvent input)
         {
-            var devEvent = _dbContext.DevEvent.SingleOrDefault(x => x.Id == id);
+            var devEvent = _dbContext.DevEvents.SingleOrDefault(x => x.Id == id);
             if (devEvent == null)
             {
                 return NotFound("Id não encontrado");
             }
 
             devEvent.Update(input.Title, input.Description, input.StartDate, input.EndDate);
+
+            _dbContext.DevEvents.Update(devEvent);
+            _dbContext.SaveChanges();
 
             return Ok(devEvent);
 
@@ -62,7 +68,7 @@ namespace AwesomeDevEventsAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {
-            var devEvent = _dbContext.DevEvent.SingleOrDefault(x => x.Id == id);
+            var devEvent = _dbContext.DevEvents.SingleOrDefault(x => x.Id == id);
             if (devEvent == null)
             {
                 return NotFound("Id não encontrado");
@@ -70,19 +76,25 @@ namespace AwesomeDevEventsAPI.Controllers
 
             devEvent.Delete();
 
+            _dbContext.SaveChanges();
+
             return Ok(devEvent);
         }
 
         [HttpPost("{id}/speakers")]
         public IActionResult PostSpeaker(Guid id, DevEventSpeaker speaker)
         {
-            var devEvent = _dbContext.DevEvent.SingleOrDefault(x => x.Id == id);
-            if(devEvent == null)
+            speaker.DevEventId = id;
+            
+            var devEvent = _dbContext.DevEvents.Any(x => x.Id == id);
+
+            if(!devEvent)
             {
                 return NotFound();
             }
 
-            devEvent.Speakers.Add(speaker);
+            _dbContext.DevEventSpeakers.Add(speaker);  
+            _dbContext.SaveChanges();
 
             return NoContent();
         }
