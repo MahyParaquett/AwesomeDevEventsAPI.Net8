@@ -8,5 +8,6 @@ Nesse repositório trouxe o projeto para a vesão do .Net8, por isso, pode ser q
 * EF Core
 * Swagger
 * AutoMapper
+* Entity FrameWork
 
 
