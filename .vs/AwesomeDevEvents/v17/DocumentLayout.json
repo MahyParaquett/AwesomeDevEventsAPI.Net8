@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{33529BC4-469A-4E77-8556-94B77A1D1099}|AwesomeDevEvents\\AwesomeDevEventsAPI.csproj|c:\\users\\mahyaraparaquettcout\\onedrive - t2m - test to market ltda\\documentos\\treinamento-t2m\\api.net\\awesomedeveventsapi\\awesomedevevents\\awesomedevevents\\etities\\devevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33529BC4-469A-4E77-8556-94B77A1D1099}|AwesomeDevEvents\\AwesomeDevEventsAPI.csproj|solutionrelative:awesomedevevents\\etities\\devevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33529BC4-469A-4E77-8556-94B77A1D1099}|AwesomeDevEvents\\AwesomeDevEventsAPI.csproj|c:\\users\\mahyaraparaquettcout\\onedrive - t2m - test to market ltda\\documentos\\treinamento-t2m\\api.net\\awesomedeveventsapi\\awesomedevevents\\awesomedevevents\\controllers\\devevantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33529BC4-469A-4E77-8556-94B77A1D1099}|AwesomeDevEvents\\AwesomeDevEventsAPI.csproj|solutionrelative:awesomedevevents\\controllers\\devevantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33529BC4-469A-4E77-8556-94B77A1D1099}|AwesomeDevEvents\\AwesomeDevEventsAPI.csproj|c:\\users\\mahyaraparaquettcout\\onedrive - t2m - test to market ltda\\documentos\\treinamento-t2m\\api.net\\awesomedeveventsapi\\awesomedevevents\\awesomedevevents\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33529BC4-469A-4E77-8556-94B77A1D1099}|AwesomeDevEvents\\AwesomeDevEventsAPI.csproj|solutionrelative:awesomedevevents\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33529BC4-469A-4E77-8556-94B77A1D1099}|AwesomeDevEvents\\AwesomeDevEventsAPI.csproj|c:\\users\\mahyaraparaquettcout\\onedrive - t2m - test to market ltda\\documentos\\treinamento-t2m\\api.net\\awesomedeveventsapi\\awesomedevevents\\awesomedevevents\\persistence\\deveventsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33529BC4-469A-4E77-8556-94B77A1D1099}|AwesomeDevEvents\\AwesomeDevEventsAPI.csproj|solutionrelative:awesomedevevents\\persistence\\deveventsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33529BC4-469A-4E77-8556-94B77A1D1099}|AwesomeDevEvents\\AwesomeDevEventsAPI.csproj|c:\\users\\mahyaraparaquettcout\\onedrive - t2m - test to market ltda\\documentos\\treinamento-t2m\\api.net\\awesomedeveventsapi\\awesomedevevents\\awesomedevevents\\etities\\deveventspeaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33529BC4-469A-4E77-8556-94B77A1D1099}|AwesomeDevEvents\\AwesomeDevEventsAPI.csproj|solutionrelative:awesomedevevents\\etities\\deveventspeaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +30,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\Program.cs",
+              "RelativeDocumentMoniker": "AwesomeDevEvents\\Program.cs",
+              "ToolTip": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\Program.cs",
+              "RelativeToolTip": "AwesomeDevEvents\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T18:18:29.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DevEventsDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\Persistence\\DevEventsDbContext.cs",
+              "RelativeDocumentMoniker": "AwesomeDevEvents\\Persistence\\DevEventsDbContext.cs",
+              "ToolTip": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\Persistence\\DevEventsDbContext.cs",
+              "RelativeToolTip": "AwesomeDevEvents\\Persistence\\DevEventsDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T18:13:02.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DevEventSpeaker.cs",
+              "DocumentMoniker": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\Etities\\DevEventSpeaker.cs",
+              "RelativeDocumentMoniker": "AwesomeDevEvents\\Etities\\DevEventSpeaker.cs",
+              "ToolTip": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\Etities\\DevEventSpeaker.cs",
+              "RelativeToolTip": "AwesomeDevEvents\\Etities\\DevEventSpeaker.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T18:09:44.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DevEvent.cs",
+              "DocumentMoniker": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\Etities\\DevEvent.cs",
+              "RelativeDocumentMoniker": "AwesomeDevEvents\\Etities\\DevEvent.cs",
+              "ToolTip": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\Etities\\DevEvent.cs",
+              "RelativeToolTip": "AwesomeDevEvents\\Etities\\DevEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T16:30:52.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DevEvantsController.cs",
+              "DocumentMoniker": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\Controllers\\DevEvantsController.cs",
+              "RelativeDocumentMoniker": "AwesomeDevEvents\\Controllers\\DevEvantsController.cs",
+              "ToolTip": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\Controllers\\DevEvantsController.cs",
+              "RelativeToolTip": "AwesomeDevEvents\\Controllers\\DevEvantsController.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAowFgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T16:28:38.818Z",
+              "EditorCaption": ""
             }
           ]
         }

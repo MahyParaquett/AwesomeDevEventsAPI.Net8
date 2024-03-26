@@ -434,9 +434,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\AwesomeDevEvents.csproj",
-      "projectName": "AwesomeDevEvents",
-      "projectPath": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\AwesomeDevEvents.csproj",
+      "projectUniqueName": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\AwesomeDevEventsAPI.csproj",
+      "projectName": "AwesomeDevEventsAPI",
+      "projectPath": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\AwesomeDevEventsAPI.csproj",
       "packagesPath": "C:\\Users\\MahyaraParaquettCout\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\obj\\",
       "projectStyle": "PackageReference",

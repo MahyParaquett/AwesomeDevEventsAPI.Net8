@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ry6/0jvCsDw+EBuxCk2gkg1zuA8XeJB3B8RdjUSyLWraqehRy0odN2jLiqBx8NXsgPjRlI2kF9N2q0NdgINyJg==",
+  "dgSpecHash": "XJGLg/PT6Jr2spPBxF580VoOC6CfcXv4Y24XuJimAalIZofXjsguAKUcBxuPca69qAeEIKsOZdQJphf9m3e3Hg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\AwesomeDevEvents.csproj",
+  "projectFilePath": "C:\\Users\\MahyaraParaquettCout\\OneDrive - T2M - Test to Market Ltda\\Documentos\\treinamento-T2M\\Api.Net\\AwesomeDevEventsAPI\\AwesomeDevEvents\\AwesomeDevEvents\\AwesomeDevEventsAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MahyaraParaquettCout\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\MahyaraParaquettCout\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
