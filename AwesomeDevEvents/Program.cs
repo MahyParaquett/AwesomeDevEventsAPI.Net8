@@ -15,7 +15,7 @@ builder.Services.AddSwaggerGen();
 //builder.Services.AddDbContext<DevEventsDbContext>(o => o.UseInMemoryDatabase("DevEventsDb"));
 
 //Conexão com um banco local
-var connectionString = builder.Configuration.GetConnectionString("DevEventsCs");
+var connectionString = builder.Configuration.GetConnectionString("DevEvantsCs");
 builder.Services.AddDbContext<DevEventsDbContext>(o => o.UseSqlServer(connectionString));
 
 

@@ -20,7 +20,7 @@ namespace AwesomeDevEventsAPI.Controllers
         [HttpGet]
         public IActionResult GetAll() 
         {//retorne todos os objetos que não estão deletados
-            var devEvents = _dbContext.DevEvents.Where(x => !x.IsDeleted).ToList();
+            var devEvents = _dbContext.DevEvents.Include(de => de.Speakers).Where(x => !x.IsDeleted).ToList();
             return Ok(devEvents);
         }
 
