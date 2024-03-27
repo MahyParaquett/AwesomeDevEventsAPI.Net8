@@ -20,7 +20,7 @@
             <response code ="200">Sucesso</response>
             <response code ="404">Não encontrado</response>
         </member>
-        <member name="M:AwesomeDevEventsAPI.Controllers.DevEventsController.Post(AwesomeDevEventsAPI.Etities.DevEvent)">
+        <member name="M:AwesomeDevEventsAPI.Controllers.DevEventsController.Post(AwesomeDevEventsAPI.Models.DevEventInputModel)">
              <summary>
              Cadastrar um evento
              </summary>
@@ -29,11 +29,11 @@
             "speakers": [{"id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "string", "talkTitle": "string","talkDescription": "string",
             "linkedInProfile": "string","devEventId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"}],"isDeleted": true}
              </remarks>
-             <param name="devEvent">Dados do evento</param>
+             <param name="input">Dados do evento</param>
              <returns>Objeto recem criado</returns>
              <response code ="201">Criado</response>
         </member>
-        <member name="M:AwesomeDevEventsAPI.Controllers.DevEventsController.Update(System.Guid,AwesomeDevEventsAPI.Etities.DevEvent)">
+        <member name="M:AwesomeDevEventsAPI.Controllers.DevEventsController.Update(System.Guid,AwesomeDevEventsAPI.Models.DevEventInputModel)">
              <summary>
              Atualizar um evento
              </summary>
@@ -57,7 +57,7 @@
             <response code ="200">Sucesso</response>
             <response code ="404">Não encontrado</response>
         </member>
-        <member name="M:AwesomeDevEventsAPI.Controllers.DevEventsController.PostSpeaker(System.Guid,AwesomeDevEventsAPI.Etities.DevEventSpeaker)">
+        <member name="M:AwesomeDevEventsAPI.Controllers.DevEventsController.PostSpeaker(System.Guid,AwesomeDevEventsAPI.Models.DevEventSpeakerInputModel)">
             <summary>
             Cadastrar palestrante
             </summary>
@@ -65,7 +65,7 @@
             {"id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "string", "talkTitle": "string","talkDescription": "string","linkedInProfile": "string","devEventId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"}
             </remarks>
             <param name="id">Identificador do evento</param>
-            <param name="speaker">Dados do palestrante</param>
+            <param name="input">Dados do palestrante</param>
             <returns>Nada</returns>
             /// <response code ="204">Sucesso</response>
             <response code ="404">Não encontrado</response>

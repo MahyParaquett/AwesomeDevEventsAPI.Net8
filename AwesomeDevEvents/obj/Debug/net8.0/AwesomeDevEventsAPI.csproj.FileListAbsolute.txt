@@ -138,3 +138,5 @@ C:\Users\MahyaraParaquettCout\OneDrive - T2M - Test to Market Ltda\Documentos\tr
 C:\Users\MahyaraParaquettCout\OneDrive - T2M - Test to Market Ltda\Documentos\treinamento-T2M\Api.Net\AwesomeDevEventsAPI\AwesomeDevEvents\AwesomeDevEvents\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\MahyaraParaquettCout\OneDrive - T2M - Test to Market Ltda\Documentos\treinamento-T2M\Api.Net\AwesomeDevEventsAPI\AwesomeDevEvents\AwesomeDevEvents\bin\Debug\net8.0\AwesomeDevEventsAPI.xml
 C:\Users\MahyaraParaquettCout\OneDrive - T2M - Test to Market Ltda\Documentos\treinamento-T2M\Api.Net\AwesomeDevEventsAPI\AwesomeDevEvents\AwesomeDevEvents\obj\Debug\net8.0\AwesomeDevEventsAPI.xml
+C:\Users\MahyaraParaquettCout\OneDrive - T2M - Test to Market Ltda\Documentos\treinamento-T2M\Api.Net\AwesomeDevEventsAPI\AwesomeDevEvents\AwesomeDevEvents\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\MahyaraParaquettCout\OneDrive - T2M - Test to Market Ltda\Documentos\treinamento-T2M\Api.Net\AwesomeDevEventsAPI\AwesomeDevEvents\AwesomeDevEvents\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

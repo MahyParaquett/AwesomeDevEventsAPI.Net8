@@ -1,4 +1,6 @@
-﻿using AwesomeDevEventsAPI.Etities;
+﻿using AutoMapper;
+using AwesomeDevEventsAPI.Etities;
+using AwesomeDevEventsAPI.Models;
 using AwesomeDevEventsAPI.Persistence;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
@@ -12,9 +14,14 @@ namespace AwesomeDevEventsAPI.Controllers
     public class DevEventsController : ControllerBase
     {
         private readonly DevEventsDbContext _dbContext;
-        public DevEventsController(DevEventsDbContext context)
+        private readonly IMapper _mapper;   
+
+        public DevEventsController(
+            DevEventsDbContext context,
+            IMapper mapper)
         {
             _dbContext = context; 
+            _mapper = mapper;
         }
 
         /// <summary>
@@ -27,7 +34,10 @@ namespace AwesomeDevEventsAPI.Controllers
         public IActionResult GetAll() 
         {//retorne todos os objetos que não estão deletados
             var devEvents = _dbContext.DevEvents.Include(de => de.Speakers).Where(x => !x.IsDeleted).ToList();
-            return Ok(devEvents);
+
+            var viewModel = _mapper.Map<List<DevEventViewModel>>(devEvents);
+
+            return Ok(viewModel);
         }
 
         /// <summary>
@@ -48,7 +58,9 @@ namespace AwesomeDevEventsAPI.Controllers
                 return NotFound("Id não encontrado");
             }
 
-            return Ok(devEvent);
+            var viewModel = _mapper.Map<DevEventViewModel>(devEvent);
+
+            return Ok(viewModel);
         }
 
         /// <summary>
@@ -59,19 +71,19 @@ namespace AwesomeDevEventsAPI.Controllers
         ///"speakers": [{"id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "string", "talkTitle": "string","talkDescription": "string",
         ///"linkedInProfile": "string","devEventId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"}],"isDeleted": true}
         /// </remarks>
-        /// <param name="devEvent">Dados do evento</param>
+        /// <param name="input">Dados do evento</param>
         /// <returns>Objeto recem criado</returns>
         /// <response code ="201">Criado</response>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
-        public IActionResult Post(DevEvent devEvent)
+        public IActionResult Post(DevEventInputModel input)
         {
-            _dbContext.DevEvents.Add(devEvent);
+            var devEvent = _mapper.Map<DevEvent>(input);
 
+            _dbContext.DevEvents.Add(devEvent);
             _dbContext.SaveChanges();
 
             return CreatedAtAction(nameof(GetById), new { id = devEvent.Id }, devEvent);
-
         }
 
         /// <summary>
@@ -90,7 +102,7 @@ namespace AwesomeDevEventsAPI.Controllers
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult Update(Guid id, DevEvent input)
+        public IActionResult Update(Guid id, DevEventInputModel input)
         {
             var devEvent = _dbContext.DevEvents.SingleOrDefault(x => x.Id == id);
             if (devEvent == null)
@@ -132,22 +144,24 @@ namespace AwesomeDevEventsAPI.Controllers
             return Ok(devEvent);
         }
 
-    /// <summary>
+        /// <summary>
     /// Cadastrar palestrante
     /// </summary>
     /// <remarks>
     /// {"id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "string", "talkTitle": "string","talkDescription": "string","linkedInProfile": "string","devEventId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"}
     /// </remarks>
     /// <param name="id">Identificador do evento</param>
-    /// <param name="speaker">Dados do palestrante</param>
+    /// <param name="input">Dados do palestrante</param>
     /// <returns>Nada</returns>
     /// /// <response code ="204">Sucesso</response>
     /// <response code ="404">Não encontrado</response>
-    [HttpPost("{id}/speakers")]
+        [HttpPost("{id}/speakers")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult PostSpeaker(Guid id, DevEventSpeaker speaker)
+        public IActionResult PostSpeaker(Guid id, DevEventSpeakerInputModel input)
         {
+            var speaker = _mapper.Map<DevEventSpeaker>(input); 
+
             speaker.DevEventId = id;
             
             var devEvent = _dbContext.DevEvents.Any(x => x.Id == id);

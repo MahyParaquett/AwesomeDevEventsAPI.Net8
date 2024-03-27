@@ -1,3 +1,4 @@
+using AwesomeDevEventsAPI.Mappers;
 using AwesomeDevEventsAPI.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -35,7 +36,8 @@ builder.Services.AddSwaggerGen(c =>
 var connectionString = builder.Configuration.GetConnectionString("DevEvantsCs");
 builder.Services.AddDbContext<DevEventsDbContext>(o => o.UseSqlServer(connectionString));
 
-
+//Contiguração pra ele achar todos os mappers
+builder.Services.AddAutoMapper(typeof(DevEventProfile).Assembly);
 
 var app = builder.Build();
 
