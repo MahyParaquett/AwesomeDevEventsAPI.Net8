@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AwesomeDevEventsAPI</name>
+    </assembly>
+    <members>
+        <member name="M:AwesomeDevEventsAPI.Controllers.DevEventsController.GetAll">
+            <summary>
+            Obter todos os eventos
+            </summary>
+            <returns>Coleção de eventos</returns>
+            <response code ="200">Sucesso</response>
+        </member>
+        <member name="M:AwesomeDevEventsAPI.Controllers.DevEventsController.GetById(System.Guid)">
+            <summary>
+            Obter um evento
+            </summary>
+            <param name="id">Identificador do evento</param>
+            <returns>Dados do evento</returns>
+            <response code ="200">Sucesso</response>
+            <response code ="404">Não encontrado</response>
+        </member>
+        <member name="M:AwesomeDevEventsAPI.Controllers.DevEventsController.Post(AwesomeDevEventsAPI.Etities.DevEvent)">
+             <summary>
+             Cadastrar um evento
+             </summary>
+             <remarks>
+             {"id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",  "title": "string",  "description": "string",  "startDate": "2024-03-27T16:16:45.049Z",  "endDate": "2024-03-27T16:16:45.049Z",
+            "speakers": [{"id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "string", "talkTitle": "string","talkDescription": "string",
+            "linkedInProfile": "string","devEventId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"}],"isDeleted": true}
+             </remarks>
+             <param name="devEvent">Dados do evento</param>
+             <returns>Objeto recem criado</returns>
+             <response code ="201">Criado</response>
+        </member>
+        <member name="M:AwesomeDevEventsAPI.Controllers.DevEventsController.Update(System.Guid,AwesomeDevEventsAPI.Etities.DevEvent)">
+             <summary>
+             Atualizar um evento
+             </summary>
+             <remarks>
+             {"id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",  "title": "string",  "description": "string",  "startDate": "2024-03-27T16:16:45.049Z",  "endDate": "2024-03-27T16:16:45.049Z",
+            "speakers": [{"id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "string", "talkTitle": "string","talkDescription": "string",
+            "linkedInProfile": "string","devEventId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"}],"isDeleted": true}
+             </remarks>
+             <param name="id">Identificador do evento</param>
+             <param name="input">Dados do evento</param>
+             <returns>Nada</returns>
+             <response code ="200">Sucesso</response>
+             <response code ="404">Não encontrado</response>
+        </member>
+        <member name="M:AwesomeDevEventsAPI.Controllers.DevEventsController.Delete(System.Guid)">
+            <summary>
+            Deletar um evento
+            </summary>
+            <param name="id">dentificador do evento</param>
+            <returns>Nada</returns>
+            <response code ="200">Sucesso</response>
+            <response code ="404">Não encontrado</response>
+        </member>
+        <member name="M:AwesomeDevEventsAPI.Controllers.DevEventsController.PostSpeaker(System.Guid,AwesomeDevEventsAPI.Etities.DevEventSpeaker)">
+            <summary>
+            Cadastrar palestrante
+            </summary>
+            <remarks>
+            {"id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "name": "string", "talkTitle": "string","talkDescription": "string","linkedInProfile": "string","devEventId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"}
+            </remarks>
+            <param name="id">Identificador do evento</param>
+            <param name="speaker">Dados do palestrante</param>
+            <returns>Nada</returns>
+            /// <response code ="204">Sucesso</response>
+            <response code ="404">Não encontrado</response>
+        </member>
+        <member name="T:AwesomeDevEventsAPI.Persistence.Migrations.FirstMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:AwesomeDevEventsAPI.Persistence.Migrations.FirstMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AwesomeDevEventsAPI.Persistence.Migrations.FirstMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:AwesomeDevEventsAPI.Persistence.Migrations.FirstMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
